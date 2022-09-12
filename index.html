@@ -29,8 +29,8 @@
 <body>
     <!-- start header section -->
 
-    <header id="hero">
-        <nav uk-sticky="start: 600; animation: uk-animation-slide-top">
+    <header id="hero" class="scrlfy">
+        <nav uk-sticky="start: 200; animation: uk-animation-slide-top">
             <div class="row">
                 <img src="resources/img/logo.png" alt="paul" class="logo">
                 <a class="nav-icon">
@@ -39,8 +39,11 @@
             </div>
         </nav>
         <div class="hero-text-box">
-            <h1>Paul Lapkin</h1> <br>
-            <span>#User Experience #Music #Creative Direction</span>
+            <h1 uk-scrollspy="cls: uk-animation-scale-up; repeat: true">Paul Lapkin</h1> <br>
+            <span uk-scrollspy="cls: uk-animation-scale-up; repeat: true">#User Experience #Music #Creative Direction</span>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><ion-icon name="arrow-round-down"></ion-icon></a>
         </div>
     </header>
 
@@ -50,13 +53,13 @@
 
     <!-- start about section -->
 
-    <section id="about">
+    <section id="about" class="scrlfy">
         <div class="row">
             <div class="grid-about-container">
-                <div class="grid-about-items">
+                <div class="grid-about-items" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
                     <img src="resources/img/paul.jpg" alt="paul" class="paul">
                 </div>
-                <div class="grid-about-items">
+                <div class="grid-about-items" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
                     <p class="intro">Hi! I am Paul Lapkin,Experience Crafter From Canada</p>
 
                     <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
@@ -79,7 +82,7 @@
 
     <!-- start process section -->
 
-    <section id="process">
+    <section id="process" class="scrlfy">
         <div class="row">
             <div class="section-title">
                 <h2>My Working Process</h2>
@@ -113,7 +116,7 @@
 
     <!-- start experience section -->
 
-    <section id="experience">
+    <section id="experience" class="scrlfy">
         <div class="row">
             <div class="grid-experience-container">
                 <div class="grid-experience-items">
@@ -158,42 +161,60 @@
 
     <!-- start portfolio section -->
 
-    <section id="portfolio">
+    <section id="portfolio" class="scrlfy">
         <div class="row">
             <div class="section-title">
                 <h2>My Latest Works</h2>
                 <p>Hi! I am Paul Lapkin,Experience Crafter From Canada</p>
             </div>
-            <div class="grid-portfolio-container" uk-lightbox>
-                <div class="grid-portfolio-items">
+
+            <div class="portfolio-filter" uk-scrollspy="cls: uk-animation-slide-top; repeat: true" >
+                <button type="button" data-filter="all">All</button>
+
+                <button type="button" data-filter=".web-design">Web Design</button>
+
+                <button type="button" data-filter=".web-dev">Web Development</button>
+
+                <button type="button" data-filter=".wp">WordPress</button>
+            </div>
+
+            <div class="grid-portfolio-container">
+
+                <div class="grid-portfolio-items mix web-design">
                     <a href="resources/css/img/lw1.jpg" data-caption="pic-1">
                         <img src="resources/css/img/lw1.jpg" alt="">
                     </a>
                 </div>
-                <div class="grid-portfolio-items"><a href="resources/css/img/lw2.jpg" data-caption="pic-1">
+
+                <div class="grid-portfolio-items mix web-dev"><a href="resources/css/img/lw2.jpg" data-caption="pic-1">
                     <img src="resources/css/img/lw2.jpg" alt="">
                 </a></div>
-                <div class="grid-portfolio-items">
+
+                <div class="grid-portfolio-items mix wp">
                     <a href="resources/css/img/lw3.jpg" data-caption="pic-1">
                         <img src="resources/css/img/lw3.jpg" alt="">
                     </a>
                 </div>
-                <div class="grid-portfolio-items">
+
+                <div class="grid-portfolio-items mix web-dev">
                     <a href="resources/css/img/lw4.jpg" data-caption="pic-1">
                         <img src="resources/css/img/lw4.jpg" alt="">
                     </a>
                 </div>
-                <div class="grid-portfolio-items">
+
+                <div class="grid-portfolio-items mix web-design">
                     <a href="resources/css/img/lw5.jpg" data-caption="pic-1">
                         <img class="test1" src="resources/css/img/lw5.jpg" alt="">
                     </a>
                 </div>
-                <div class="grid-portfolio-items">
+
+                <div class="grid-portfolio-items mix web-dev">
                     <a href="resources/css/img/lw6.jpg" data-caption="pic-1">
                         <img src="resources/css/img/lw6.jpg" alt="">
                     </a>
                 </div>
-                <div class="grid-portfolio-items">
+
+                <div class="grid-portfolio-items mix wp">
                     <a href="resources/css/img/lw7.jpg" data-caption="pic-1">
                         <img src="resources/css/img/lw7.jpg" alt="">
                     </a>
@@ -208,7 +229,7 @@
 
     <!-- start testimonial section -->
 
-    <section id="testimonial">
+    <section id="testimonial" class="scrlfy">
         <div class="row">
             <div class="grid-testimonial-container">
                 <div class="grid-testimonial-items">
@@ -233,7 +254,7 @@
 
     <!-- start contact section -->
 
-    <section id="contact">
+    <section id="contact" class="scrlfy">
         <div class="row">
             <div class="grid-contact-container">
                 <div class="grid-contact-items">
@@ -251,7 +272,7 @@
                         <div class="single-form">
                             <textarea cols="30" rows="10" placeholder="Message" required></textarea>
                         </div>
-                        <div class="single-form-btn">
+                        <div class="single-form-btn"  uk-scrollspy="cls: uk-animation-shake; repeat: true">
                             <input class="btn btn-full" type="submit" value="Hire Me!">
                         </div>
                     </form>
@@ -283,7 +304,7 @@
 
     <!-- star footer section -->
 
-    <footer id="footer">
+    <footer id="footer" class="scrlfy">
         <div class="row">
             <div class="social-icons">
                 <ul>
@@ -321,9 +342,30 @@
 
     <script src="vendors/js/uikit-icons.min.js"></script>
     <script src="vendors/js/uikit.min.js"></script>
+    
+    <!-- mixitup-script -->
 
-    <!-- js-scripts -->
+    <script src="vendors/js/mixitup.min.js"></script>
+
+
+    <!-- particles-js -->
+    <script src="vendors/js/particles.min.js"></script>
+
+
+    <script src="vendors/js/app.js"></script>
+
+  
+
+    <!-- ion-icons-scripts -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- scrlfy -->
+
+    <script src="vendors/js/jquery.scrollify.js"></script>
+
+    <!-- custom js script -->
+
+    <script src="resources/js/script.js"></script>
 </body>
 
 </html>
