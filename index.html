@@ -16,6 +16,10 @@
 
     <link rel="stylesheet" href="vendors/css/normalize.css">
 
+
+    <!-- uikit-css -->
+    <link rel="stylesheet" href="vendors/css/uikit.min.css">
+
     <!-- css -->
     <link rel="stylesheet" href="resources/css/style.css">
     <!-- responsive -->
@@ -26,7 +30,7 @@
     <!-- start header section -->
 
     <header id="hero">
-        <nav>
+        <nav uk-sticky="start: 600; animation: uk-animation-slide-top">
             <div class="row">
                 <img src="resources/img/logo.png" alt="paul" class="logo">
                 <a class="nav-icon">
@@ -160,14 +164,40 @@
                 <h2>My Latest Works</h2>
                 <p>Hi! I am Paul Lapkin,Experience Crafter From Canada</p>
             </div>
-            <div class="grid-portfolio-container">
-                <div class="grid-portfolio-items"></div>
-                <div class="grid-portfolio-items"></div>
-                <div class="grid-portfolio-items"></div>
-                <div class="grid-portfolio-items"></div>
-                <div class="grid-portfolio-items"></div>
-                <div class="grid-portfolio-items"></div>
-                <div class="grid-portfolio-items"></div>
+            <div class="grid-portfolio-container" uk-lightbox>
+                <div class="grid-portfolio-items">
+                    <a href="resources/css/img/lw1.jpg" data-caption="pic-1">
+                        <img src="resources/css/img/lw1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="grid-portfolio-items"><a href="resources/css/img/lw2.jpg" data-caption="pic-1">
+                    <img src="resources/css/img/lw2.jpg" alt="">
+                </a></div>
+                <div class="grid-portfolio-items">
+                    <a href="resources/css/img/lw3.jpg" data-caption="pic-1">
+                        <img src="resources/css/img/lw3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="grid-portfolio-items">
+                    <a href="resources/css/img/lw4.jpg" data-caption="pic-1">
+                        <img src="resources/css/img/lw4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="grid-portfolio-items">
+                    <a href="resources/css/img/lw5.jpg" data-caption="pic-1">
+                        <img class="test1" src="resources/css/img/lw5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="grid-portfolio-items">
+                    <a href="resources/css/img/lw6.jpg" data-caption="pic-1">
+                        <img src="resources/css/img/lw6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="grid-portfolio-items">
+                    <a href="resources/css/img/lw7.jpg" data-caption="pic-1">
+                        <img src="resources/css/img/lw7.jpg" alt="">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -275,6 +305,10 @@
                 Copyright: Ali Sayed, All Rights Reserved.
             </div>
         </div>
+
+        <div class="totop">
+            <a href="#" uk-totop uk-scroll></a>
+        </div>
     </footer>
 
 
@@ -283,7 +317,10 @@
 
 
 
+    <!-- uikit js -->
 
+    <script src="vendors/js/uikit-icons.min.js"></script>
+    <script src="vendors/js/uikit.min.js"></script>
 
     <!-- js-scripts -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
