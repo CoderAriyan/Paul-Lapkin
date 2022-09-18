@@ -11,6 +11,12 @@
         width: 100%;
     }
 
+    .close-btn ion-icon {
+
+        top : 44px;
+        right: 38px;
+    }
+
 }
 
 /* =====================================
@@ -43,6 +49,11 @@
         grid-column: 1/2;
     }
 
+    .close-btn ion-icon {
+        top: 29px;
+        right: 33px;
+      }
+
 }
 
 
@@ -71,6 +82,17 @@
     }
 
 }
+
+.menu-item {
+
+    top : 43%;
+}
+
+.close-btn ion-icon {
+    top: 40px;
+  }
+
+
 
 
 /* =====================================
@@ -105,13 +127,26 @@
     }
 
     h1 {
-        font-size: 550%;
+        font-size: 750%;
     }
 
     .hero-text-box span {
         font-size: 195%;
     }
 }
+
+.close-btn ion-icon {
+
+    top : 45px;
+}
+
+
+
+
+
+
+
+
 
 
 

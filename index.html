@@ -29,21 +29,76 @@
 <body>
     <!-- start header section -->
 
-    <header id="hero" class="scrlfy">
+    <header id="hero" class="scrollify">
         <nav uk-sticky="start: 200; animation: uk-animation-slide-top">
             <div class="row">
                 <img src="resources/img/logo.png" alt="paul" class="logo">
-                <a class="nav-icon">
+                <a class="nav-icon" onclick="openMenu()">
                     <ion-icon name="menu"></ion-icon>
                 </a>
             </div>
+
+            <!-- hamburger-menu -->
+
+            <div class="menu-container" id="navbar" onclick="closeMenu()">
+
+                <div class="close-btn" onclick="closeMenu()">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+
+                <div class="menu-item">
+                    <ul>
+                        <li>
+                            <a href="#hero" onclick="closeMenu()">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#about" onclick="closeMenu()">About</a>
+                        </li>
+
+                        <li>
+                            <a href="#process" onclick="closeMenu()">Process</a>
+                        </li>
+
+                        <li>
+                            <a href="#experience" onclick="closeMenu()">Experience</a>
+                        </li>
+
+                        <li>
+                            <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+                        </li>
+
+                        <li>
+                            <a href="#testimonial" onclick="closeMenu()">Testimonial</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact" onclick="closeMenu()">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+
         </nav>
         <div class="hero-text-box">
-            <h1 uk-scrollspy="cls: uk-animation-scale-up; repeat: true">Paul Lapkin</h1> <br>
-            <span uk-scrollspy="cls: uk-animation-scale-up; repeat: true">#User Experience #Music #Creative Direction</span>
+
+            <div uk-scrollspy="cls: uk-animation-scale-up; repeat: true">
+                <h1>Paul Lapkin</h1> <br>
+                
+                <span>#User Experience #Music #Creative
+                    Direction</span>
+
+            </div>
+
         </div>
+
         <div class="scroll-down">
-            <a href="#about"><ion-icon name="arrow-round-down"></ion-icon></a>
+            <a href="#about">
+                <ion-icon name="arrow-down-outline"></ion-icon>
+            </a>
         </div>
     </header>
 
@@ -53,13 +108,13 @@
 
     <!-- start about section -->
 
-    <section id="about" class="scrlfy">
+    <section id="about" class="scrollify">
         <div class="row">
             <div class="grid-about-container">
-                <div class="grid-about-items" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                <div class="grid-about-items">
                     <img src="resources/img/paul.jpg" alt="paul" class="paul">
                 </div>
-                <div class="grid-about-items" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                <div class="grid-about-items">
                     <p class="intro">Hi! I am Paul Lapkin,Experience Crafter From Canada</p>
 
                     <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
@@ -82,7 +137,7 @@
 
     <!-- start process section -->
 
-    <section id="process" class="scrlfy">
+    <section id="process" class="scrollify">
         <div class="row">
             <div class="section-title">
                 <h2>My Working Process</h2>
@@ -116,7 +171,7 @@
 
     <!-- start experience section -->
 
-    <section id="experience" class="scrlfy">
+    <section id="experience" class="scrollify">
         <div class="row">
             <div class="grid-experience-container">
                 <div class="grid-experience-items">
@@ -161,14 +216,14 @@
 
     <!-- start portfolio section -->
 
-    <section id="portfolio" class="scrlfy">
+    <section id="portfolio" class="scrollify">
         <div class="row">
             <div class="section-title">
                 <h2>My Latest Works</h2>
                 <p>Hi! I am Paul Lapkin,Experience Crafter From Canada</p>
             </div>
 
-            <div class="portfolio-filter" uk-scrollspy="cls: uk-animation-slide-top; repeat: true" >
+            <div class="portfolio-filter" uk-scrollspy="cls: uk-animation-slide-top; repeat: true">
                 <button type="button" data-filter="all">All</button>
 
                 <button type="button" data-filter=".web-design">Web Design</button>
@@ -187,8 +242,8 @@
                 </div>
 
                 <div class="grid-portfolio-items mix web-dev"><a href="resources/css/img/lw2.jpg" data-caption="pic-2">
-                    <img src="resources/css/img/lw2.jpg" alt="">
-                </a></div>
+                        <img src="resources/css/img/lw2.jpg" alt="">
+                    </a></div>
 
                 <div class="grid-portfolio-items mix wp">
                     <a href="resources/css/img/lw3.jpg" data-caption="pic-3">
@@ -229,7 +284,7 @@
 
     <!-- start testimonial section -->
 
-    <section id="testimonial" class="scrlfy">
+    <section id="testimonial" class="scrollify">
         <div class="row">
             <div class="grid-testimonial-container">
                 <div class="grid-testimonial-items">
@@ -254,7 +309,7 @@
 
     <!-- start contact section -->
 
-    <section id="contact" class="scrlfy">
+    <section id="contact" class="scrollify">
         <div class="row">
             <div class="grid-contact-container">
                 <div class="grid-contact-items">
@@ -272,7 +327,7 @@
                         <div class="single-form">
                             <textarea cols="30" rows="10" placeholder="Message" required></textarea>
                         </div>
-                        <div class="single-form-btn"  uk-scrollspy="cls: uk-animation-shake; repeat: true">
+                        <div class="single-form-btn" uk-scrollspy="cls: uk-animation-shake; repeat: true">
                             <input class="btn btn-full" type="submit" value="Hire Me!">
                         </div>
                     </form>
@@ -304,7 +359,7 @@
 
     <!-- star footer section -->
 
-    <footer id="footer" class="scrlfy">
+    <footer id="footer" class="scrollify">
         <div class="row">
             <div class="social-icons">
                 <ul>
@@ -335,14 +390,18 @@
 
     <!-- end footer section -->
 
-
-
+    <!-- jquary cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <!-- uikit js -->
 
     <script src="vendors/js/uikit-icons.min.js"></script>
     <script src="vendors/js/uikit.min.js"></script>
-    
+
+    <!-- ion-icons-scripts -->
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
     <!-- mixitup-script -->
 
     <script src="vendors/js/mixitup.min.js"></script>
@@ -354,12 +413,7 @@
 
     <script src="vendors/js/app.js"></script>
 
-  
-
-    <!-- ion-icons-scripts -->
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
-    <!-- scrlfy -->
+    <!-- scrollify -->
 
     <script src="vendors/js/jquery.scrollify.js"></script>
 

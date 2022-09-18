@@ -44,8 +44,6 @@
 
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -60,7 +58,7 @@ body {
     font-size: 10px;
     text-rendering: optimizeLegibility;
     line-height: 1.5;
-    
+      
 }
 
 a,
@@ -278,6 +276,7 @@ h1::after {
 
 }
 
+
 .scroll-down {
 
     position: absolute;
@@ -285,7 +284,7 @@ h1::after {
     right: 0;
     bottom: 60px;
     margin: auto;
-    text-align: center;
+    width: 40px;
 }
 
 .scroll-down a ion-icon {
@@ -293,7 +292,25 @@ h1::after {
     font-size: 400%;
     color: #fff;
     position: relative;
-    animation: 2s arrow infinite ease;
+    -webkit-animation: 2s arrow infinite ease;
+            animation: 2s arrow infinite ease;
+}
+
+
+@-webkit-keyframes arrow {
+
+    0% {
+
+        top: 10px;
+    }
+    50% {
+
+        top: 30px;
+    }
+    100% {
+
+        top: 10px;
+    }
 }
 
 
@@ -312,6 +329,81 @@ h1::after {
         top: 10px;
     }
 }
+
+
+/* Hamburger Menu */
+
+
+
+.menu-container {
+
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.close-btn ion-icon {
+
+    position: absolute;
+    top: 45px;
+    right: 90px;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 400%;
+    
+}
+
+.close-btn ion-icon:hover {
+
+    cursor: pointer;
+    color: #ff2b4a
+}
+
+
+
+.menu-item {
+
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+
+
+.menu-item ul li {
+
+    margin: 15px 0px;
+    transition: .3s;
+
+}
+
+.menu-item ul li:hover a {
+
+    color : #ff2b4a;
+    cursor: pointer;
+    font-size: 320%;
+}
+
+
+
+.menu-item ul li a {
+
+    color: #fff;
+    font-size: 300%;
+    text-transform: uppercase;
+    display: block;
+
+}
+
+
+
 
 
 
@@ -335,7 +427,8 @@ h1::after {
 .paul {
 
     width: 100%;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
 
 .intro {
